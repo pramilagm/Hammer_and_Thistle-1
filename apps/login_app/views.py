@@ -49,7 +49,3 @@ def login(request):
     messages.error(request, "The email was not found")
     return redirect("/")
 
-def logout(request): 
-    if 'logged_in' in request.session:
-        request.session.clear()
-    return redirect('/')

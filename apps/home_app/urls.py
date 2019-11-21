@@ -9,4 +9,6 @@ urlpatterns = [
     url(r'product$', views.product),
     url(r'products$', views.products),
     url(r'text_page$', views.text_page),
+    url(r'logout$', views.logout),
+
 ]
