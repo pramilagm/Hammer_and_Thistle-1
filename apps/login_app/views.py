@@ -14,7 +14,7 @@ def register(request):
     if len(error) > 0:
         for key, value in error.items():
             messages.error(request, value)
-        return redirect('/cart')
+        return redirect('/login')
     else:
         request.session.clear()
         first_name = request.POST["first_name"]
@@ -31,13 +31,6 @@ def register(request):
         request.session['logged_in'] = True
         return redirect('/cart')
 
-def dashboard(request):
-    if 'logged_in' in request.session:
-        return render( request, "login_app/dashboard.html")
-    else:
-        messages.error(request,"User not recognized")
-        return redirect("/cart")
-
 def login(request):
     request.session.clear()
     user = User.objects.filter(email=request.POST['email']) 
@@ -48,10 +41,10 @@ def login(request):
             request.session['user_id'] = logged_user.id
             request.session['logged_in'] = True
             request.session['first_name'] = logged_user.first_name
-            return redirect('/dashboard')
+            return redirect('/cart')
         else:
                 messages.error(request, "Password is not correct")
-                return redirect("/cart")
+                return redirect("/login")
 
     messages.error(request, "The email was not found")
     return redirect("/")
