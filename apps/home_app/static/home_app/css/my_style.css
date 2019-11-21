@@ -1,0 +1,86 @@
+* {
+    font-family: monospace;
+    background-color: darkslateblue;
+    color: grey;
+}
+.navigation {
+    min-height: 120px;
+    background-color: lightslategrey;
+    position: fixed;
+}
+.logo {
+    height: 20%;
+    width: 20%;
+}
+.button {
+    margin: 25px;
+    box-shadow: indigo 10px 10px;
+}
+input {
+    margin: 0 20px;
+    float: right;
+    box-shadow: indigo 10px 10px;
+    background-color: rgb(109, 201, 185);
+    border-top-color: white;
+    border-left-color: thistle;
+    border-right-color: turquoise;
+    border-bottom-color: wheat;
+}
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+body {
+    margin: 0;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+.header {
+background-color: #f1f1f1;
+padding: 30px;
+text-align: center;
+}
+
+#navbar {
+overflow: hidden;
+background-color: #333;
+}
+
+#navbar a {
+float: left;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+#navbar a:hover {
+background-color: #ddd;
+color: black;
+}
+
+#navbar a.active {
+background-color: #4CAF50;
+color: white;
+}
+
+.content {
+padding: 16px;
+}
+
+.sticky {
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.sticky + .content {
+padding-top: 60px;
+}
+.fakeimg {
+    height: 200px;
+    background: #aaa;
+}

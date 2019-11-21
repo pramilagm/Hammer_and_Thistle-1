@@ -1,0 +1,22 @@
+the wall.html comment generator
+
+            {% if comments %}
+            <ul class="comments">
+                {% for comments in comments %}
+                    <h2>Comments</h2>
+                    <textarea>{{Comment.text}}</textarea>
+                    {% if request.postData.Comment.user.id == request.session.user_id %}
+                        <a href="/delete_comment{{Comment.id}}">Delete</a>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            <!-- MESSAGE SHOWING THING -->
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <!-- MESSAGE SHOWING THING -->
