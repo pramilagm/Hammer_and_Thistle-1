@@ -383,6 +383,20 @@ background-color: lightslategray;
 	color: #afa6c8;
 }
 
+.carousel_background1 {
+	background-image: url(../images/rings/silver_garnet/silver_garnet.jpg) !important;
+}
+
+.yellow {
+	background-image: url(../images/necklaces/silver_pendant/pendant_jumbotron.jpg)  !important;
+	background-repeat: space !important;
+}
+
+.purple {
+	background-image: url(../images/necklaces/pomegranate/img2.jpg) !important;
+}
+
+
 #slider .yellow h3 {
 	color: #f7c769;
 }
