@@ -46,28 +46,22 @@ def checkout(request):
         }
         return render(request, "store/checkout.html",context)
 
-def product(request): 
-    return render (request, 'home_app/product.html') #, context
-    # ,item_id - needs to be added
-    # context = {
-    #     # 'target_ring' : Ring.objects.get(id = item_id)
-    #     # 'target_necklace' : Necklace.objects.all(id = item_id)
-    #     'impulse_buy' : Recommended.objects.all()
-    # }
-
+def product(request,product_id): 
+    context ={
+        'product_info':Ring.objects.get(id=product_id)
+    }
+    return render (request, 'home_app/product.html',context) 
+  
 def products(request):
-    return render (request, 'home_app/products.html' ) #, context
-    # context = {
-    #     'all_rings' : Ring.objects.all(),
-    #     'all_necklaces' : Necklace.objects.all(),
-    #     'impulse_buy' : Recommended.objects.all()
-    # }
+    context = {
+        'all_rings' : Ring.objects.all(),
+        'all_necklaces' : Necklace.objects.all(),
+    }
+    return render (request, 'home_app/products.html',context) 
 
 def text_page(request):
     return render (request, 'home_app/text-page.html')
-
 def logout(request): 
     if 'logged_in' in request.session:
         request.session.clear()
     return redirect('/')
-

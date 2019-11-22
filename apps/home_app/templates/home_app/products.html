@@ -112,13 +112,15 @@
 				</aside>
 				<div id="content">
 					<section class="products">
-						<article>
-							<a href="product.html"><img src="images/11.jpg" alt=""></a>
-							<h3><a href="product.html">Lorem ipsum dolor</a></h3>
-							<h4><a href="product.html">$990.00</a></h4>
-							<a href="/cart" class="btn-add">Add to cart</a>
-						</article>
-						<article>
+						{% for ring in all_rings %}
+							<article>
+								<a href="product.html"><img src="images/11.jpg" alt=""></a>
+								<h3><a href="/product/{{ring.id}}">{{ring.item}}</a></h3>
+								<h4><a href="/product/{{ring.id}}">${{ring.price}}</a></h4>
+								<a href="/product/{{ring.id}}" class="btn-add">Add to cart</a>
+							</article>
+						{% endfor %}
+						<!-- <article>
 							<a href="product.html"><img src="images/12.jpg" alt=""></a>
 							<h3><a href="product.html">cupidatat non proident</a></h3>
 							<h4><a href="product.html">$1 200.00</a></h4>
@@ -159,7 +161,7 @@
 							<h3><a href="product.html">magna aliqua</a></h3>
 							<h4><a href="product.html">$3 500.00</a></h4>
 							<a href="/cart" class="btn-add">Add to cart</a>
-						</article>
+						</article> -->
 					</section>
 				</div>
 				<!-- / content -->

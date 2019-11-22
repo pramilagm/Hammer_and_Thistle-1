@@ -11,7 +11,7 @@ class Ver_Manager(models.Manager):
         last_name = postData['last_name']
 
         if User.objects.filter(email=postData['email']):
-            error['emaildupe'] = "User already has an account with that email address"
+            error['email'] = "User already has an account with that email address"
             return error
         if not((len(first_name) >2 ) & str.isalpha(first_name)):
             error["first_name"] = "First name should be populated"
