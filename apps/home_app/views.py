@@ -70,3 +70,4 @@ def logout(request):
     if 'logged_in' in request.session:
         request.session.clear()
     return redirect('/')
+
