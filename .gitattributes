@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 *.* linguist-language=Python
+=======
+*.HTML* linguist-language= Python
+>>>>>>> 6f38a5a7c1852ce0e827547e7c813fc093a771e8
